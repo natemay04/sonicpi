@@ -1,1 +1,28 @@
 
+live_loop :ramily do
+  24.times do
+    sample :drum_snare_soft
+    sleep 2
+  end
+  stop
+end
+live_loop :w do
+  16.times do
+    sample :drum_heavy_kick, amp: 2
+    sleep 1
+  end
+  stop
+end
+live_loop :l do
+  8.times do
+    sample :drum_cymbal_closed
+    sleep 0.5
+  end
+  stop
+end
+live_loop :brown do
+  8.times do
+    sample :cymbal_hard
+    sleep 1
+  end
+end
