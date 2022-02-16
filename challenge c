@@ -1,0 +1,36 @@
+use_bpm 160
+use_synth :saw
+use_synth_defaults amp: 2
+
+define :stranger_things_song do
+  play :c4
+  sleep 0.5
+  play :e4
+  sleep 0.5
+  play :g4
+  sleep 0.5
+  play :b4
+  sleep 0.5
+  play :c5
+  sleep 0.5
+  play :b4
+  sleep 0.5
+  play :g4
+  sleep 0.5
+  play :e4
+  sleep 0.5
+end
+
+
+with_fx :ping_pong do
+  stranger_things_song
+end
+with_fx :autotuner do
+  stranger_things_song
+end
+with_fx :panslicer do
+  stranger_things_song
+end
+with_fx :wobble do
+  stranger_things_song
+end
