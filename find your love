@@ -61,7 +61,18 @@ sleep 0.25
 
 
 #first part of second line
-
+play :e5
+sleep 0.5
+play :c5
+play :f4, sustain: 4
+play :d4, sustain: 4
+play :e2, sustain: 2
+sleep 0.5
+play :c5
+play :f4, sustain: 4
+play :d4, sustain: 4
+play :e2, sustain: 2
+sleep 0.5
 
 
 
