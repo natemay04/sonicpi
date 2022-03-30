@@ -1,80 +1,58 @@
 # find your love notes
-use_bpm 90
+use_bpm 95
 
 use_synth :piano
-#first part of first line
-play :g4
-play :f2, sustain: 8
-play :c3, sustain: 8
-sleep 0.25
-play :f4
-sleep 0.5
-play :f4
-sleep 0.5
-play :e5
-sleep 0.5
-play :c5
-play :a2, sustain: 8
-play :e3, sustain: 8
-sleep 0.5
-play :b4
-sleep 0.25
-play :a4
-sleep 0.25
-#not sure if using above code
-
-
-
-#2nd parts is same
-play :a4
-sleep 0.25
-play :a4
-sleep 0.25
-play :b4
-sleep 0.25
-play :b4
-play :f4, sustain: 4
-play :d4, sustain: 4
-play :e2, sustain: 2
-sleep 0.5
-play :c5
-sleep 1
-play :e5
-sleep 0.5
-play :c5
-play :f4, sustain: 4
-play :d4, sustain: 4
-play :e2, sustain: 2
-sleep 0.5
-play :b4
-sleep 0.25
-play :a4
-sleep 0.25
-play :a4
-play :b2, sustain: 4
-#potential note here
-sleep 0.25
-play :a4
-sleep 0.5
-play :f4
-sleep 0.25
-
-
-#first part of second line
-play :e5
-sleep 0.5
-play :c5
-play :f4, sustain: 4
-play :d4, sustain: 4
-play :e2, sustain: 2
-sleep 0.5
-play :c5
-play :f4, sustain: 4
-play :d4, sustain: 4
-play :e2, sustain: 2
-sleep 0.5
-
-e
+m = 1
+72.times do
+  play (m)
+  sleep 0.125
+  m = m +1
+end
+4.times do
+  play (m)
+  sleep 0.5
+  m = m+1
+end
+live_loop :ill do
+  
+  play :e5
+  sleep 0.5
+  play :c5
+  play :c2, sustain: 2
+  sleep 0.5
+  play :b4
+  sleep 0.25
+  play :a4
+  sleep 0.25
+  play :a4
+  play :c3, sustain: 4
+  sleep 0.25
+  play :a4
+  sleep 0.5
+  play :b4
+  sleep 0.25
+  play :b4
+  play :b1, sustain: 2
+  sleep 0.5
+  play :c5
+  sleep 1
+  play :e5
+  sleep 0.5
+  play :c5
+  play :b1, sustain: 2
+  sleep 0.5
+  play :b4
+  sleep 0.25
+  play :a4
+  sleep 0.25
+  play :a4
+  play :b2, sustain: 4
+  sleep 0.25
+  play :a4
+  sleep 0.5
+  play :f4
+  sleep 0.5
+end
 
 
 
