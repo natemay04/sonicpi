@@ -1,0 +1,118 @@
+#INTRO
+#samples
+milk = "C:/Users/nathan_mayeda/Downloads/milk.wav"
+trey = "C:/Users/nathan_mayeda/Downloads/trey.wav"
+lebron = "C:/Users/nathan_mayeda/Downloads/lebronjames.wav"
+
+#SONGONE
+turbo = "C:/Users/nathan_mayeda/Downloads/turbo.wav"
+
+man = "C:/Users/nathan_mayeda/Downloads/anotherman.wav"
+hand = "C:/Users/nathan_mayeda/Downloads/hand.wav"
+flower = "C:/Users/nathan_mayeda/Downloads/flowers.wav"
+
+use_bpm 120
+
+define :notes do |f1, f2|
+  play f1
+  play f2
+  sleep 1
+end
+
+m = 1
+#30sec
+
+live_loop :secondary do
+  with_fx :autotuner do
+    sample :bd_sone, amp: 1
+    sleep 2
+  end
+end
+
+use_synth :piano
+live_loop :fadein do
+  1.times do
+    40.times do
+      play (m)
+      sleep 0.2
+      m = m +1
+    end
+    4.times do
+      play (m)
+      sleep 1
+      m = m+1
+    end
+  end
+  stop
+end
+
+
+
+define :bruno do
+  use_synth :piano
+  use_synth_defaults amp: 2
+  4.times do
+    4.times do
+      notes :f4, :a
+    end
+    4.times do
+      notes :d4, :g
+    end
+    4.times do
+      notes :e4, :g
+    end
+    4.times do
+      notes :e4, :c
+    end
+  end
+  stop
+end
+
+sleep 12
+live_loop :define do
+  bruno
+end
+
+live_loop :eightoeight do
+  sample :bd_808, amp: 825
+  sleep 4
+end
+
+
+sleep 16
+live_loop :secondary do
+  with_fx :autotuner do
+    sample :bd_sone, amp: 2
+    sleep 2
+  end
+end
+#38sec
+sleep 8
+live_loop :runthatbac do
+  1.times do
+    sample turbo, amp: 2
+    sleep 1
+  end
+  stop
+end
+#76sec
+sleep 38
+live_loop :fadeout do
+  1.times do
+    40.times do
+      play (m)
+      sleep 0.2
+      m = m -1
+    end
+    4.times do
+      play (m)
+      sleep 1
+      m = m-1
+    end
+  end
+  stop
+end
+
+#TRANSISTION
+#SONGTWO
+#OUTRO
