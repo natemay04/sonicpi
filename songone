@@ -19,7 +19,7 @@ define :notes do |f1, f2|
   sleep 1
 end
 
-m = 1
+s = 1
 #30sec
 
 live_loop :secondary do
@@ -33,14 +33,14 @@ use_synth :piano
 live_loop :fadein do
   1.times do
     40.times do
-      play (m)
+      play (s)
       sleep 0.2
-      m = m +1
+      s = s +1
     end
     4.times do
-      play (m)
+      play (s)
       sleep 1
-      m = m+1
+      s = s+1
     end
   end
   stop
@@ -51,7 +51,7 @@ end
 define :bruno do
   use_synth :piano
   use_synth_defaults amp: 2
-  4.times do
+  5.times do
     4.times do
       notes :f4, :a
     end
@@ -96,18 +96,19 @@ live_loop :runthatbac do
   stop
 end
 #76sec
-sleep 38
+sleep 54
+c = 44
 live_loop :fadeout do
   1.times do
     40.times do
-      play (m)
+      play (c)
       sleep 0.2
-      m = m -1
+      c = c -1
     end
     4.times do
-      play (m)
+      play (c)
       sleep 1
-      m = m-1
+      c = c-1
     end
   end
   stop
@@ -116,3 +117,4 @@ end
 #TRANSISTION
 #SONGTWO
 #OUTRO
+
