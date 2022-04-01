@@ -8,75 +8,84 @@ iheart = "C:/Users/nathan_mayeda/Downloads/ibetterheart.wav"
 
 use_synth :piano
 m = 1
-60.times do
-  play (m)
+live_loop :lol do
+  1.times do
+    64.times do
+      play (m)
+      sleep 0.25
+      m = m +1
+    end
+  end
+  stop
+end
+
+define :lilsleep do |q1|
+  play q1
   sleep 0.25
-  m = m +1
 end
-4.times do
-  play (m)
+
+define :medsleep do |e1|
+  play e1
+  sleep 0.5
+end
+
+define :bigsleep do |r1|
+  play r1
   sleep 1
-  m = m+1
 end
-live_loop :ill do
-  play :e4
-  play :b4
-  play :g4
+
+define :bigbigsleep do |b1, b2, b3|
+  play b1
+  play b2
+  play b3
   sleep 1.5
-  play :e5
-  sleep 0.5
-  play :c5
-  sleep 0.5
-  play :b4
-  sleep 0.25
-  play :a4
-  sleep 0.25
-  play :a4
-  sleep 0.25
-  play :a4
-  sleep 0.5
-  play :b4
-  sleep 0.25
-  play :b4
-  sleep 0.5
-  play :c5
-  sleep 1
-  play :e5
-  sleep 0.5
-  play :c5
-  sleep 0.5
-  play :b4
-  sleep 0.25
-  play :a4
-  sleep 0.25
-  play :a4
-  sleep 0.25
-  play :a4
-  sleep 0.5
-  play :f4
-  sleep 0.25
 end
 
-live_loop :bass do
-  play :c2
-  sleep 1
-  play :c3
-  sleep 1
-  play :c2
-  sleep 1
-  play :c3
-  sleep 1
-  play :b1
-  sleep 1
-  play :b2
-  sleep 1
-  play :b1
-  sleep 1
-  play :b2
-  sleep 1
+define :highnotes do
+  9.times do
+    bigbigsleep :e4, :b4, :g4
+    medsleep :e5
+    medsleep :c5
+    lilsleep :b4
+    lilsleep :a4
+    lilsleep :a4
+    medsleep :a4
+    lilsleep :b4
+    medsleep :b4
+    bigsleep :c5
+    medsleep :e5
+    medsleep :c5
+    lilsleep :b4
+    lilsleep :a4
+    lilsleep :a4
+    medsleep :a4
+    lilsleep :f4
+  end
+  stop
 end
 
+sleep 16
+live_loop :define do
+  highnotes
+end
 
+bassnotes = [ "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2"]
+w = 0
+live_loop :yay do
+  play (bassnotes[i])
+  sleep 1
+  w = w + 1
+end
 
-
-
+sleep 72
+p = 64
+live_loop :lol do
+  1.times do
+    64.times do
+      play (p)
+      sleep 0.25
+      p = p -1
+    end
+  end
+  stop
+end
