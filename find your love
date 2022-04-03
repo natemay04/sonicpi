@@ -6,6 +6,16 @@ hey = "C:/Users/nathan_mayeda/Downloads/heyheyhey.wav"
 ilove = "C:/Users/nathan_mayeda/Downloads/ibetterlove.wav"
 iheart = "C:/Users/nathan_mayeda/Downloads/ibetterheart.wav"
 
+live_loop :beattwo do
+  with_fx :echo do
+    8.times do
+      sample :elec_snare, amp: 0.5
+      sleep 2
+    end
+    stop
+  end
+end
+
 use_synth :piano
 m = 1
 live_loop :lol do
@@ -72,14 +82,25 @@ end
 bassnotes = [ "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2"]
 w = 0
 live_loop :yay do
-  play (bassnotes[i])
+  play (bassnotes[w])
   sleep 1
   w = w + 1
 end
 
+live_loop :beattwoo do
+  with_fx :echo do
+    36.times do
+      sample :elec_snare
+      sleep 2
+    end
+    stop
+  end
+end
+
 sleep 72
-p = 64
+
 live_loop :lol do
+  p = 64
   1.times do
     64.times do
       play (p)
@@ -88,4 +109,14 @@ live_loop :lol do
     end
   end
   stop
+end
+
+live_loop :beattwoo do
+  with_fx :echo do
+    8.times do
+      sample :elec_snare, amp: 0.5
+      sleep 2
+    end
+    stop
+  end
 end
