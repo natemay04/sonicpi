@@ -1,6 +1,5 @@
 #INTRO
 #samples
-curry = "C:/Users/nathan_mayeda/Downloads/bangcurry.wav"
 milk = "C:/Users/nathan_mayeda/Downloads/milk.wav"
 trey = "C:/Users/nathan_mayeda/Downloads/trey.wav"
 lebron = "C:/Users/nathan_mayeda/Downloads/lebronjames.wav"
@@ -14,24 +13,21 @@ flower = "C:/Users/nathan_mayeda/Downloads/flowers.wav"
 
 use_bpm 120
 
-define :notes do |f1, f2|
-  play f1
-  play f2
-  sleep 1
-end
-
-s = 1
 #30sec
 
 live_loop :secondary do
   with_fx :autotuner do
-    sample :bd_sone, amp: 1
-    sleep 2
+    6.times do
+      sample :bd_sone
+      sleep 2
+    end
+    stop
   end
 end
 
 use_synth :piano
 live_loop :fadein do
+  s = 1
   1.times do
     40.times do
       play (s)
@@ -47,7 +43,13 @@ live_loop :fadein do
   stop
 end
 
-
+define :notes do |f1, f2|
+  play f1
+  play f2
+  sleep 1
+end
+thirdline = ["e4", "g"]
+fourthline = ["e4", "c"]
 
 define :bruno do
   use_synth :piano
@@ -60,10 +62,12 @@ define :bruno do
       notes :d4, :g
     end
     4.times do
-      notes :e4, :g
+      play (thirdline)
+      sleep 1
     end
     4.times do
-      notes :e4, :c
+      play (fourthline)
+      sleep 1
     end
   end
   stop
@@ -75,16 +79,22 @@ live_loop :define do
 end
 
 live_loop :eightoeight do
-  sample :bd_808, amp: 825
-  sleep 4
+  20.times do
+    sample :bd_808, amp: 825
+    sleep 4
+  end
+  stop
 end
 
 
 sleep 16
-live_loop :secondary do
+live_loop :secondaryy do
   with_fx :autotuner do
-    sample :bd_sone, amp: 2
-    sleep 2
+    32.times do
+      sample :bd_sone, amp: 2
+      sleep 2
+    end
+    stop
   end
 end
 #38sec
@@ -115,7 +125,19 @@ live_loop :fadeout do
   stop
 end
 
+live_loop :secondaryyy do
+  with_fx :autotuner do
+    6.times do
+      sample :bd_sone
+      sleep 2
+    end
+    stop
+  end
+end
+
 #TRANSISTION
 #SONGTWO
 #OUTRO
+
+
 
