@@ -1,4 +1,5 @@
 #INTRO
+curry = "C:/Users/nathan_mayeda/Downloads/bangcurry.wav"
 #samples
 milk = "C:/Users/nathan_mayeda/Downloads/milk.wav"
 trey = "C:/Users/nathan_mayeda/Downloads/trey.wav"
@@ -13,11 +14,12 @@ flower = "C:/Users/nathan_mayeda/Downloads/flowers.wav"
 
 use_bpm 120
 
+
 #30sec
 
 live_loop :secondary do
   with_fx :autotuner do
-    6.times do
+    14.times do
       sample :bd_sone
       sleep 2
     end
@@ -25,7 +27,13 @@ live_loop :secondary do
   end
 end
 
+sleep 8
+sample curry
+
+
+sleep 16
 use_synth :piano
+
 live_loop :fadein do
   s = 1
   1.times do
@@ -127,7 +135,7 @@ end
 
 live_loop :secondaryyy do
   with_fx :autotuner do
-    6.times do
+    12.times do
       sample :bd_sone
       sleep 2
     end
@@ -136,8 +144,13 @@ live_loop :secondaryyy do
 end
 
 #TRANSISTION
+sleep 12
+sample trey, amp: 4
+sleep 4
+sample milk
+sleep 4
+sample lebron, amp: 2
+sleep 4
 #SONGTWO
 #OUTRO
-
-
 
