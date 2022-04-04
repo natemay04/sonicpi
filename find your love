@@ -6,6 +6,9 @@ hey = "C:/Users/nathan_mayeda/Downloads/heyheyhey.wav"
 ilove = "C:/Users/nathan_mayeda/Downloads/ibetterlove.wav"
 iheart = "C:/Users/nathan_mayeda/Downloads/ibetterheart.wav"
 
+rickroll = "C:/Users/nathan_mayeda/Downloads/rickroll.wav"
+
+
 live_loop :beattwo do
   with_fx :echo do
     8.times do
@@ -79,12 +82,18 @@ live_loop :define do
   highnotes
 end
 
-bassnotes = [ "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2", "c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2"]
+bassnotes = ["c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2"]
 w = 0
 live_loop :yay do
-  play (bassnotes[w])
-  sleep 1
-  w = w + 1
+  9.times do
+    play (bassnotes[w])
+    sleep 1
+    w = w + 1
+    if w > 7
+      w = 0
+    end
+  end
+  stop
 end
 
 live_loop :beattwoo do
@@ -97,7 +106,61 @@ live_loop :beattwoo do
   end
 end
 
-sleep 72
+sleep 8
+live_loop :heyy do
+  1.times do
+    sample ilove
+    sleep 1
+  end
+  stop
+end
+
+sleep 12
+live_loop :heartt do
+  1.times do
+    sample iheart
+    sleep 1
+  end
+  stop
+end
+
+sleep 12
+live_loop :heyy do
+  1.times do
+    sample ilove
+    sleep 1
+  end
+  stop
+end
+
+sleep 12
+live_loop :heartt do
+  1.times do
+    sample iheart
+    sleep 1
+  end
+  stop
+end
+
+sleep 12
+live_loop :heyy do
+  1.times do
+    sample ilove
+    sleep 1
+  end
+  stop
+end
+
+sleep 12
+live_loop :heartt do
+  1.times do
+    sample iheart
+    sleep 1
+  end
+  stop
+end
+
+sleep 4
 
 live_loop :lol do
   p = 64
