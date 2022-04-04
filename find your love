@@ -6,7 +6,7 @@ hey = "C:/Users/nathan_mayeda/Downloads/heyheyhey.wav"
 ilove = "C:/Users/nathan_mayeda/Downloads/ibetterlove.wav"
 iheart = "C:/Users/nathan_mayeda/Downloads/ibetterheart.wav"
 
-rickroll = "C:/Users/nathan_mayeda/Downloads/rickroll.wav"
+rickroll = "C:/Users/nathan_mayeda/Downloads/rickroll.wav" 8 sec
 
 
 live_loop :beattwo do
