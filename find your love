@@ -6,12 +6,12 @@ hey = "C:/Users/nathan_mayeda/Downloads/heyheyhey.wav"
 ilove = "C:/Users/nathan_mayeda/Downloads/ibetterlove.wav"
 iheart = "C:/Users/nathan_mayeda/Downloads/ibetterheart.wav"
 
-rickroll = "C:/Users/nathan_mayeda/Downloads/rickroll.wav" 8 sec
+rickroll = "C:/Users/nathan_mayeda/Downloads/rickroll.wav" #8 sec
 
 
 live_loop :beattwo do
   with_fx :echo do
-    8.times do
+    12.times do
       sample :elec_snare, amp: 0.5
       sleep 2
     end
@@ -21,6 +21,8 @@ end
 
 use_synth :piano
 m = 1
+
+sleep 4
 live_loop :lol do
   1.times do
     64.times do
@@ -183,3 +185,17 @@ live_loop :beattwoo do
     stop
   end
 end
+
+sleep 8
+live_loop :beattwooo do
+  with_fx :echo do
+    8.times do
+      sample :elec_snare, amp: 0.35
+      sleep 2
+    end
+    stop
+  end
+end
+
+sleep 4
+sample rickroll
