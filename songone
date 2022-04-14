@@ -17,7 +17,7 @@ use_bpm 120
 
 #30sec
 
-live_loop :secondary do
+live_loop :beatone do
   with_fx :autotuner do
     14.times do
       sample :bd_sone
@@ -59,7 +59,7 @@ end
 thirdline = ["e4", "g"]
 fourthline = ["e4", "c"]
 
-define :bruno do
+define :brunosong do
   use_synth :piano
   use_synth_defaults amp: 2
   5.times do
@@ -83,7 +83,7 @@ end
 
 sleep 12
 live_loop :define do
-  bruno
+  brunosong
 end
 
 live_loop :eightoeight do
