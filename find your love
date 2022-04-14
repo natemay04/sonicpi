@@ -56,7 +56,7 @@ define :bigbigsleep do |b1, b2, b3|
   sleep 1.5
 end
 
-define :highnotes do
+define :drakesong do
   9.times do
     bigbigsleep :e4, :b4, :g4
     medsleep :e5
@@ -81,7 +81,7 @@ end
 
 sleep 16
 live_loop :define do
-  highnotes
+  drakesong
 end
 
 bassnotes = ["c2", "c3", "c2", "c3", "b1", "b2", "b1", "b2"]
