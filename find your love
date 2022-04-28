@@ -20,15 +20,15 @@ live_loop :beattwo do
 end
 
 use_synth :piano
-m = 1
+m = 0.0625
 
 sleep 4
 live_loop :lol do
   1.times do
-    64.times do
-      play (m)
-      sleep 0.25
-      m = m +1
+    16.times do
+      play 64, amp: (m)
+      sleep 1
+      m = m + 0.0625
     end
   end
   stop
@@ -165,12 +165,12 @@ end
 sleep 4
 
 live_loop :lol do
-  p = 64
+  p = 1
   1.times do
-    64.times do
-      play (p)
-      sleep 0.25
-      p = p -1
+    16.times do
+      play 64, amp: (p)
+      sleep 1
+      p = p - 0.0625
     end
   end
   stop
@@ -198,4 +198,5 @@ live_loop :beattwooo do
 end
 
 sleep 4
-sample rickroll
+sample rickroll# Welcome to Sonic Pi
+
